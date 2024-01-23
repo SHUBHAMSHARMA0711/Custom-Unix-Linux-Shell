@@ -39,13 +39,12 @@ This comprehensive overview provides details on external and internal commands i
 
 ## Error Handling
 
-1. If the user enters any command other than the specified ones, they will receive a **command not found** error.
-2. In the **cat** and **rm** commands, if the user enters a non-existing file name, they will get a **No such file or directory** error.
-3. In the **cd** command, if the user enters a non-existing directory name, they will get a **No such file or directory** error.
-4. For any command, if the user enters an option not handled by the Shell, they will receive an **invalid option** error.
-5. In the **cat** command, if the user enters **cat** without any argument, they will get a **missing operands** error.
-6. In the **mkdir** command, if the user tries to create a duplicate directory, they will receive a **cannot create directory** error.
-7. Error handling for creating a child process using the Fork System Call, with a message **Fork Error (Child Process Not Created).**
+1. **Command Not Found:** If the user enters any command other than the specified ones.
+2. **No Such File or Directory:** In **cat** and **rm** commands for non-existing files, and in **cd** for non-existing directories.
+3. **Invalid Option:** If the user enters an option not handled by the shell.
+4. **Missing Operands:** In **cat** if the user enters it without any argument.
+5. **Cannot Create Directory:** In **mkdir** if the user tries to create a duplicate directory.
+6. **Fork Error (Child Process Not Created):** Error handling for creating a child process using the Fork System Call.
 
 
 ## Implementation Details
