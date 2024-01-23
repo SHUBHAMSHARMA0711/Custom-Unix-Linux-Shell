@@ -1,5 +1,5 @@
 # Shell Description
-A comprehensive overview of the commands and error handling implemented in the shell.
+This comprehensive overview provides details on external and internal commands implemented in the shell, along with error-handling mechanisms. Additionally, test cases and assumptions are outlined to guide users in utilizing the shell effectively.
 
 ## External Commands
 
@@ -47,6 +47,15 @@ A comprehensive overview of the commands and error handling implemented in the s
 6. In the **mkdir** command, if the user tries to create a duplicate directory, they will receive a **cannot create directory** error.
 7. Error handling for creating a child process using the Fork System Call, with a message **Fork Error (Child Process Not Created).**
 
+
+## Implementation Details
+
+The shell can be implemented using both forks and threads. If someone wishes to use threads, they can add `&t` at the end of the command. For example:
+- `ls -a &t`
+- `cat -n cat.c &t`
+- `date -I &t`
+
+  
 ## Test Cases
 
 ### 1. ls
