@@ -1,78 +1,76 @@
-# **Description of Shell** 
+# Shell Description
+A comprehensive overview of the commands and error handling implemented in the shell.
 
-**Commands that Shell can Handle:-** 
+## External Commands
 
-**External Commands:-** 
+### 1. ls
+    - ls -a
+    - ls -m
 
-1. **ls** 
-   - ls -a 
-   - ls -m 
-2. **cat** 
-    - cat -n 
-    - cat -E 
-3. **date** 
-    - date -u 
-    - date -I 
-4. **rm** 
-    - rm -v 
-    - rm -i 
-5. **mkdir** 
-    - mkdir -p 
-    - mkdir -v 
+### 2. cat
+    - cat -n`
+    - cat -E
 
-**Internal:-** 
+### 3. date
+    - date -u
+    - date -I
 
-1. **cd** 
-    - cd ~ 
-    - cd **..** 
-2. **echo** 
-    - echo \* 
-    - echo - - help 
-3. **pwd** 
-    - pwd -L 
-    - pwd -P 
+### 4. rm
+    - rm -v
+    - rm -i
 
-**Errors I handled:-** 
+### 5. mkdir
+    - mkdir -p
+    - mkdir -v
 
-1. *If  the  User  Enters  any  Command,  Other  than  the above-mentioned then he will get a “command not found” Error.* 
-1. *In  the  “cat  and  rm”  command, if the user enters any file name that does not exist in that particular directory, he will get a “No such file or directory” Error.* 
-1. *In the “cd” command, if the user enters any directory name that  will  not  exists  then,  he  will  get  “No  such  file  or directory” Error.*
-1. *For any command, if user enters any other option that will not be handled by Shell then he will get an “invalid option” Error.* 
-1. *In “cat” command if user enters cat without any argument then he will get “missing operands” Error.*
-1. *In “mkdir” command if user try to make duplicate directory then he will get “cannot create directory” Error.* 
-1. *Also,  I  have  handled  Errors  in  creating  a  Child  process using  Fork  System  Call  by  printing  “Fork  Error  (Child Process Not Created)”.* 
+## Internal Commands
 
-**Test Cases:-** 
+### 1. cd
+    - cd ~
+    - cd ..
 
-1. **ls** & **ls &t** 
-    - ls -a **&** ls -a &t 
-    - ls -m  **&** ls -m &t 
+### 2. echo
+    - echo *
+    - echo -- help
 
-2. **cat** 
-    - cat -n cat.c **&** cat -n cat.c &t 
-    - cat -E cat.c **&** cat -E cat.c &t 
-3. **date** & **date &t** 
-    - date -u **&** date -u &t 
-    - date -I **&** date -I &t 
-4. **rm hello.c** & **rm hello.c &t** 
-    - rm -v hello.c **&** rm -v hello.c &t 
-    - rm -i hello.c **&** rm -i hello.c &t
-5. **mkdir newDir** & **mkdir newDir &t** 
-    - mkdir -p newDir/newDir2 **&** mkdir -p newDir/newDir2 &t 
-    - mkdir -v newDir **&** mkdir -v newDir &t 
+### 3. pwd
+    - pwd -L
+    - pwd -P
 
-1. **cd** 
-    - cd ~ 
-    - cd **..** 
-2. **echo** 
-    - echo \* 
-    - echo - - help 
-3. **pwd** 
-    - pwd -L 
-    - pwd -P 
+## Error Handling
 
-**Assumptions:-** 
+1. If the user enters any command other than the specified ones, they will receive a **command not found** error.
+2. In the **cat** and **rm** commands, if the user enters a non-existing file name, they will get a **No such file or directory** error.
+3. In the **cd** command, if the user enters a non-existing directory name, they will get a **No such file or directory** error.
+4. For any command, if the user enters an option not handled by the Shell, they will receive an **invalid option** error.
+5. In the **cat** command, if the user enters **cat** without any argument, they will get a **missing operands** error.
+6. In the **mkdir** command, if the user tries to create a duplicate directory, they will receive a **cannot create directory** error.
+7. Error handling for creating a child process using the Fork System Call, with a message **Fork Error (Child Process Not Created).**
 
-1. *I  assume  that  for  any  command  user  will  not  pass  any unnecessary arguments in between or after the command.*
-1. *I assume the user will not pass Directory as an argument in “cat and rm” command.* 
-1. *I assume the user will not enter “mkdir and rm” without any arguments.* 
+## Test Cases
+
+### 1. ls
+   - `ls -a` & `ls -a &t`
+   - `ls -m` & `ls -m &t`
+
+### 2. cat
+   - `cat -n cat.c` & `cat -n cat.c &t`
+   - `cat -E cat.c` & `cat -E cat.c &t`
+
+### 3. date
+   - `date -u` & `date -u &t`
+   - `date -I` & `date -I &t`
+
+### 4. rm hello.c
+   - `rm -v hello.c` & `rm -v hello.c &t`
+   - `rm -i hello.c` & `rm -i hello.c &t`
+
+### 5. mkdir newDir
+   - `mkdir -p newDir/newDir2` & `mkdir -p newDir/newDir2 &t`
+   - `mkdir -v newDir` & `mkdir -v newDir &t`
+
+## Assumptions
+
+1. No unnecessary arguments will be passed in between or after the command.
+2. **cat** and **rm** commands will not be passed a directory as an argument.
+3. **mkdir** and **rm** commands will not be entered without any arguments.
