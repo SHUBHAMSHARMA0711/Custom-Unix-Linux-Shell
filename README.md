@@ -31,7 +31,7 @@ This comprehensive overview provides details on external and internal commands i
 
 ### 2. echo
     - echo *
-    - echo -- help
+    - echo --help
 
 ### 3. pwd
     - pwd -L
