@@ -8,7 +8,7 @@ This comprehensive overview provides details on external and internal commands i
     - ls -m
 
 ### 2. cat
-    - cat -n`
+    - cat -n
     - cat -E
 
 ### 3. date
